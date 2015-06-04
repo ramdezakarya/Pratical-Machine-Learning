@@ -1,11 +1,4 @@
----
-title: "pml_project"
-author: "RAMDE ZAKAYA"
-date: "Thursday, June 4, 2015"
-output: html_document
----
-
-###Introduction
+##Introduction
 
 The goal of your project is to predict the manner in which they did the exercise. This is the "classe" variable in the training set. You may use any of the other variables to predict with. You should create a report describing how you built your model, how you used cross validation, what you think the expected out of sample error is, and why you made the choices you did. You will also use your prediction model to predict 20 different test cases. 
 
@@ -21,7 +14,7 @@ library(randomForest)
 ```
 
 
-###Data loading 
+##Data loading 
 
 ```{r}
 setwd("C:/Users/zakarya.ramde/Desktop/Coursera/Data Scientist/Pratical Machine Learning")
@@ -31,13 +24,8 @@ dim(training); dim(Testing)
 ```
 As we can see, the training set has 19 622 rows for 160 variables. 
 
-###Data cleaning 
 
-Explore data, we see many columns with more NA values or empty cells. So, we have to clean data by delete this columns. We begin with first colum (ID column). 
-Analyzing with the view table, column, we see that seven first columns haven't some importance for the prediction so we can delete them also. 
-
-
-###Data partition 
+##Data partition 
 
 For data partition, we devided the training data into 60% training and 40% testing.
 
@@ -119,7 +107,6 @@ pml_write_files = function(x){
 pml_write_files(answers)
 
 ```
-
 
 
 
